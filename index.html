@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <main class="game-page">
+    <section class="game-card">
+      <h1 class="game-title">HANGMAN GAME</h1>
+
+      <div class="image-wrap">
+        <img
+          id="hangmanImage"
+          src="images/hangman0.png"
+          alt="Hangman graphic"
+          class="fade-in"
+        />
+      </div>
+
+      <div class="status-row">
+        <button id="playAgainBtn" type="button">Play Again</button>
+        <p class="guesses-text">
+          Guesses left: <span id="guessesLeft">6</span>
+        </p>
+      </div>
+
+      <p id="hintText" class="hint-text">Hint: Loading...</p>
+
+      <div id="wordDisplay" class="word-display"></div>
+
+      <div class="guess-input-row">
+        <label for="letterInput" class="input-label">Enter a letter:</label>
+        <input
+          type="text"
+          id="letterInput"
+          class="letter-input"
+          maxlength="1"
+          placeholder="A-Z"
+          autocomplete="off"
+        />
+        <button id="guessBtn" type="button" class="guess-btn">Guess</button>
+      </div>
+
+      <p id="message" class="message"></p>
+
+      <div id="keyboard" class="keyboard"></div>
+    </section>
+  </main>
+</body>
+</html>

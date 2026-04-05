@@ -1,0 +1,260 @@
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.game-page {
+  min-height: 100vh;
+  @include flex-center(center, flex-start);
+  padding: 35px 20px;
+}
+
+.game-card {
+  width: 100%;
+  max-width: 860px;
+  background: #dde3ea;
+  border-radius: 16px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.game-title {
+  text-align: center;
+  margin: 0 0 34px;
+  font-size: 2.7rem;
+  color: #2e6cf6;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #2e6cf6;
+    margin-top: 6px;
+    border-radius: 3px;
+  }
+
+  &::before {
+    content: "|";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -24px;
+    font-size: 22px;
+    color: #2e6cf6;
+    font-weight: 700;
+  }
+}
+
+.image-wrap {
+  text-align: center;
+  margin-bottom: 18px;
+
+  img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.status-row {
+  @include flex-center(space-between, center);
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+#playAgainBtn,
+.guess-btn {
+  border: none;
+  background: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    background: #f7f7f7;
+  }
+}
+
+.guesses-text {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.hint-text {
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 10px 0 18px;
+  font-weight: 600;
+  color: #2f3d4a;
+}
+
+.word-display {
+  @include flex-center(center, center);
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.letter-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  @include flex-center(center, center);
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.letter-box.hidden-letter {
+  background: #ffffff;
+  border: 2px solid #ccd3dc;
+  color: transparent;
+}
+
+.letter-box.revealed-letter {
+  background: #b9d9a8;
+  border: 2px solid #a2c38f;
+  color: #222;
+}
+
+.guess-input-row {
+  @include flex-center(center, center);
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.input-label {
+  font-weight: 600;
+}
+
+.letter-input {
+  width: 70px;
+  padding: 12px 10px;
+  border: 2px solid #ccd3dc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #fff;
+}
+
+.message {
+  text-align: center;
+  min-height: 28px;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 8px;
+}
+
+.key-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  font-size: 1.15rem;
+  background: #e9edf2;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &.correct {
+    background: #b9d9a8;
+  }
+
+  &.wrong {
+    background: #d7b7c2;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .keyboard {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .letter-box {
+    width: 46px;
+    height: 46px;
+    font-size: 1.5rem;
+  }
+
+  .game-title {
+    font-size: 2.2rem;
+  }
+
+  .guesses-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .keyboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .status-row {
+    justify-content: center;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .guess-input-row {
+    flex-direction: column;
+  }
+}

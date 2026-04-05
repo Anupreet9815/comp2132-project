@@ -1,0 +1,122 @@
+[
+  {
+    "category": "animals",
+    "word": "elephant",
+    "hint": "A very large animal with a trunk"
+  },
+  {
+    "category": "animals",
+    "word": "tiger",
+    "hint": "A wild animal with black stripes"
+  },
+  {
+    "category": "animals",
+    "word": "rabbit",
+    "hint": "A small animal that likes carrots"
+  },
+  {
+    "category": "kitchen tools",
+    "word": "blender",
+    "hint": "Used to mix ingredients into a smooth liquid"
+  },
+  {
+    "category": "kitchen tools",
+    "word": "spoon",
+    "hint": "Used for soup and cereal"
+  },
+  {
+    "category": "kitchen tools",
+    "word": "knife",
+    "hint": "Used to cut food"
+  },
+  {
+    "category": "clothes",
+    "word": "jacket",
+    "hint": "Worn when the weather is cold"
+  },
+  {
+    "category": "clothes",
+    "word": "jeans",
+    "hint": "Blue denim pants"
+  },
+  {
+    "category": "clothes",
+    "word": "sweater",
+    "hint": "A warm piece of clothing for the upper body"
+  },
+  {
+    "category": "verbs",
+    "word": "writing",
+    "hint": "Using words on paper or on a screen"
+  },
+  {
+    "category": "verbs",
+    "word": "running",
+    "hint": "Moving fast on foot"
+  },
+  {
+    "category": "verbs",
+    "word": "cooking",
+    "hint": "Preparing food using heat"
+  },
+  {
+    "category": "indoor games",
+    "word": "chess",
+    "hint": "A strategy board game with kings and queens"
+  },
+  {
+    "category": "indoor games",
+    "word": "carrom",
+    "hint": "A board game played with coins and a striker"
+  },
+  {
+    "category": "indoor games",
+    "word": "ludo",
+    "hint": "A colorful board game played with dice"
+  },
+  {
+    "category": "fruits",
+    "word": "banana",
+    "hint": "A yellow fruit"
+  },
+  {
+    "category": "fruits",
+    "word": "mango",
+    "hint": "Often called the king of fruits"
+  },
+  {
+    "category": "fruits",
+    "word": "apple",
+    "hint": "A fruit linked with the saying about doctors"
+  },
+  {
+    "category": "flowers",
+    "word": "tulip",
+    "hint": "A spring flower with a cup-shaped bloom"
+  },
+  {
+    "category": "flowers",
+    "word": "lotus",
+    "hint": "A flower that grows in water"
+  },
+  {
+    "category": "flowers",
+    "word": "rose",
+    "hint": "A flower often connected with love"
+  },
+  {
+    "category": "vegetables",
+    "word": "spinach",
+    "hint": "A green leafy vegetable"
+  },
+  {
+    "category": "vegetables",
+    "word": "carrot",
+    "hint": "An orange vegetable good for eyesight"
+  },
+  {
+    "category": "vegetables",
+    "word": "potato",
+    "hint": "Used for fries, chips, and mashed dishes"
+  }
+]
